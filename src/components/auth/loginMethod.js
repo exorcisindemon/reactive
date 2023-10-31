@@ -20,7 +20,7 @@ const LogInMethod = () => {
         </h2>
         <h3 className="w-full lg:w-[40%] text-zinc-600 font-medium text-sm lg:text-lg mt-8">
           Join the Community - Unlock a World of Possibilities with a Single
-          Login!
+          Log In!
         </h3>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
           <PrimaryLightButton
@@ -54,7 +54,7 @@ const LogInMethod = () => {
         <div className="flex flex-row flex-wrap gap-4 mt-8">
           <PrimaryLightButton href="/auth/login" icon={<TbLogin />} desc={"Log In"} />
           <SecondaryLightButton
-            href="/"
+            href="/auth/recover"
             icon={<TbKey />}
             desc={"Recover Account"}
           />

@@ -82,7 +82,7 @@ const Regis = () => {
             desc={"Log In"}
           />
           <SecondaryLightButton
-            href="/"
+            href="/auth/recover"
             icon={<TbKey />}
             desc={"Recover Account"}
           />
