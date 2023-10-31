@@ -12,7 +12,7 @@ import {
 } from "react-icons/tb";
 
 import LoginMethod from "../components/auth/loginMethod";
-import Feature from "../components/index/feature";
+import KeyFeatures from "../components/index/keyFeatures";
 import Accessibility from "../components/index/accessibility";
 import Updates from "../components/index/updates";
 import Goals from "../components/index/goals";
@@ -28,7 +28,7 @@ const Index = () => {
 
   const handleFeature = (e) => {
     e.preventDefault();
-    setActiveComponent("Feature");
+    setActiveComponent("KeyFeatures");
   };
 
   const handleAccessibility = (e) => {
@@ -72,7 +72,7 @@ const Index = () => {
             href="/"
             task={handleFeature}
             icon={<TbSortDescending2 />}
-            desc={"Feature"}
+            desc={"Key Features"}
           />
           <SecondaryLightButton
             href="/"
@@ -102,7 +102,7 @@ const Index = () => {
       </div>
       {activeComponent === "LoginMethod" && <LoginMethod />}
       {activeComponent === "LearnMore" && <LearnMore />}
-      {activeComponent === "Feature" && <Feature />}
+      {activeComponent === "KeyFeatures" && <KeyFeatures />}
       {activeComponent === "Accessibility" && <Accessibility />}
       {activeComponent === "Updates" && <Updates />}
       {activeComponent === "Goals" && <Goals />}
