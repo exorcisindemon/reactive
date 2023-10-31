@@ -2,6 +2,7 @@ import PrimaryLightButton from "../button/primaryLightButton";
 import SecondaryLightButton from "../button/secondaryLightButton";
 import XSLinkLightButton from "../button/xsLinkLightButton";
 import {
+  TbArrowLeft,
   TbMail,
   TbBrandGoogle,
   TbBrandApple,
@@ -9,9 +10,9 @@ import {
   TbKey,
 } from "react-icons/tb";
 
-const LoginMethod = () => {
+const Goals = () => {
   return (
-    <div className="flex flex-col justify-between w-full lg:w-[70%] p-8 lg:p-16">
+    <div className="flex flex-col justify-start w-full lg:w-[70%] p-8 lg:p-16">
       <div className="flex flex-row justify-between">
         <h6 className="text-zinc-400 font-medium text-xs mt-0">
           Reactive 2023
@@ -20,10 +21,14 @@ const LoginMethod = () => {
           1.00.200(A) - 31 September, 2023
         </h6>
       </div>
-      <div>
-        <h2 className="text-black font-bold text-2xl lg:text-4xl mt-0">
-          Log in
-        </h2>
+      <div className="mt-8">
+        <a
+          href="/"
+          className="flex flex-row gap-2 items-center text-black font-bold text-2xl lg:text-4xl mt-0 transition-all hover:text-blue-600"
+        >
+          <TbArrowLeft />
+          Goals
+        </a>
         <h3 className="w-full lg:w-[40%] text-zinc-600 font-medium text-sm lg:text-lg mt-8">
           Join the Community - Unlock a World of Possibilities with a Single
           Login!
@@ -70,4 +75,4 @@ const LoginMethod = () => {
   );
 };
 
-export default LoginMethod;
+export default Goals;

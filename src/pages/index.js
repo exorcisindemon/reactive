@@ -1,3 +1,4 @@
+import { useState } from "react";
 import style from "./index.module.css";
 import PrimaryLightButton from "../components/button/primaryLightButton";
 import SecondaryLightButton from "../components/button/secondaryLightButton";
@@ -11,8 +12,40 @@ import {
 } from "react-icons/tb";
 
 import LoginMethod from "../components/auth/loginMethod";
+import Feature from "../components/index/feature";
+import Accessibility from "../components/index/accessibility";
+import Updates from "../components/index/updates";
+import Goals from "../components/index/goals";
+import LearnMore from "../components/index/learnMore";
 
 const Index = () => {
+  const [activeComponent, setActiveComponent] = useState("LoginMethod");
+
+  const handleLearnMore = (e) => {
+    e.preventDefault();
+    setActiveComponent("LearnMore");
+  };
+
+  const handleFeature = (e) => {
+    e.preventDefault();
+    setActiveComponent("Feature");
+  };
+
+  const handleAccessibility = (e) => {
+    e.preventDefault();
+    setActiveComponent("Accessibility");
+  };
+
+  const handleUpdates = (e) => {
+    e.preventDefault();
+    setActiveComponent("Updates");
+  };
+
+  const handleGoals = (e) => {
+    e.preventDefault();
+    setActiveComponent("Goals");
+  };
+
   return (
     <main
       className={`${style.index} flex flex-col lg:flex-row w-full h-full lg:h-screen`}
@@ -29,24 +62,33 @@ const Index = () => {
           to react to your preferences and interests.
         </h2>
         <div className="flex flex-row flex-wrap gap-4 mt-8">
-          <PrimaryLightButton href="/" icon={<TbBulb />} desc={"Learn More"} />
+          <PrimaryLightButton
+            href="/"
+            task={handleLearnMore}
+            icon={<TbBulb />}
+            desc={"Learn More"}
+          />
           <SecondaryLightButton
             href="/"
+            task={handleFeature}
             icon={<TbSortDescending2 />}
             desc={"Feature"}
           />
           <SecondaryLightButton
             href="/"
+            task={handleAccessibility}
             icon={<TbAccessible />}
             desc={"Accessibility"}
           />
           <SecondaryLightButton
             href="/"
+            task={handleUpdates}
             icon={<TbRefresh />}
             desc={"Updates"}
           />
           <SecondaryLightButton
             href="/"
+            task={handleGoals}
             icon={<TbRollercoaster />}
             desc={"Goals"}
           />
@@ -58,7 +100,12 @@ const Index = () => {
           encompasses our <XSLinkLightButton href="/" desc={"Cookie Use"} />.
         </h6>
       </div>
-      <LoginMethod />
+      {activeComponent === "LoginMethod" && <LoginMethod />}
+      {activeComponent === "LearnMore" && <LearnMore />}
+      {activeComponent === "Feature" && <Feature />}
+      {activeComponent === "Accessibility" && <Accessibility />}
+      {activeComponent === "Updates" && <Updates />}
+      {activeComponent === "Goals" && <Goals />}
     </main>
   );
 };
