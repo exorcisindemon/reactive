@@ -5,6 +5,7 @@ import LogIn from "./components/auth/logIn";
 import Regis from "./components/auth/regis";
 import NotAvailable from "./pages/notAvailable";
 import RecoverAccount from "./components/auth/recoverAccount";
+import Layout from "./pages/app/layout";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/auth/regis" element={<Regis />} />
         <Route path="/auth/recover" element={<RecoverAccount />} />
         <Route path="*" element={<NotAvailable />} />
+        <Route path="/art" element={<Layout />} />
       </Routes>
     </Router>
   );
