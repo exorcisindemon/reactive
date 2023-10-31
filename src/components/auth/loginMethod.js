@@ -15,7 +15,7 @@ const LogInMethod = () => {
     <div className="flex flex-col justify-between w-full lg:w-[70%] p-8 lg:p-16">
       <VersionControl />
       <div>
-        <h2 className="text-black font-bold text-2xl lg:text-4xl mt-0">
+        <h2 className="text-black font-bold text-2xl lg:text-4xl mt-8 lg:mt-0">
           Log In
         </h2>
         <h3 className="w-full lg:w-[40%] text-zinc-600 font-medium text-sm lg:text-lg mt-8">

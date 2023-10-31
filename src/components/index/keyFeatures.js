@@ -2,7 +2,6 @@ import VersionControl from "../../utility/versionControl";
 import SecondaryLightButton from "../button/secondaryLightButton";
 import {
   TbArrowLeft,
-  TbAccessible,
   TbHelpCircle,
   TbStar,
 } from "react-icons/tb";
@@ -97,20 +96,6 @@ const KeyFeatures = () => {
               advancements to provide users with the best tools and features for
               a superior online experience.
             </p>
-          </div>
-          <div className="flex flex-col flex-wrap gap-4 w-full lg:w-[40%]">
-            <h4 className="w-full text-blue-600 font-medium text-lg mt-0">
-              Accessibility
-            </h4>
-            <p className="w-full text-zinc-600 font-medium text-sm mt-0">
-              Let us tell you more about Accessibility section by tapping the
-              button below.
-            </p>
-            <SecondaryLightButton
-              href="/"
-              icon={<TbAccessible />}
-              desc={"Accessibility"}
-            />
           </div>
         </div>
         <div className="mt-8">

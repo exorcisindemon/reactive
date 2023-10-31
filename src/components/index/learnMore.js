@@ -1,6 +1,6 @@
 import VersionControl from "../../utility/versionControl";
 import SecondaryLightButton from "../button/secondaryLightButton";
-import { TbArrowLeft, TbSortDescending2, TbHelpCircle, TbStar } from "react-icons/tb";
+import { TbArrowLeft, TbHelpCircle, TbStar } from "react-icons/tb";
 
 const LearnMore = () => {
   return (
@@ -80,20 +80,6 @@ const LearnMore = () => {
               online experience, keeping you in tune with the ever-changing
               landscape of the digital world.
             </p>
-          </div>
-          <div className="flex flex-col flex-wrap gap-4 w-full lg:w-[40%]">
-            <h4 className="w-full text-blue-600 font-medium text-lg mt-0">
-              Key Features
-            </h4>
-            <p className="w-full text-zinc-600 font-medium text-sm mt-0">
-              Let us tell you more about Key Features section by tapping the
-              button below.
-            </p>
-            <SecondaryLightButton
-              href="/"
-              icon={<TbSortDescending2 />}
-              desc={"Key Features"}
-            />
           </div>
         </div>
         <div className="mt-8">
