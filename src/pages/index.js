@@ -1,13 +1,21 @@
 import style from "./index.module.css";
 import PrimaryLightButton from "../components/button/primaryLightButton";
 import SecondaryLightButton from "../components/button/secondaryLightButton";
-import { TbBulb, TbSortDescending2, TbAccessible, TbRefresh } from "react-icons/tb";
 import XSLinkLightButton from "../components/button/xsLinkLightButton";
+import {
+  TbBulb,
+  TbSortDescending2,
+  TbAccessible,
+  TbRefresh,
+  TbRollercoaster,
+} from "react-icons/tb";
+
+import LoginMethod from "../components/auth/loginMethod";
 
 const Index = () => {
   return (
     <main
-      className={`${style.index} flex flex-col lg:flex-row w-full h-screen`}
+      className={`${style.index} flex flex-col lg:flex-row w-full h-full lg:h-screen`}
     >
       <div className="bg-white flex flex-col justify-center w-full lg:w-[30%] p-8 lg:p-16">
         <h1 className="text-black font-bold text-2xl lg:text-4xl mt-0">
@@ -37,17 +45,20 @@ const Index = () => {
             icon={<TbRefresh />}
             desc={"Updates"}
           />
+          <SecondaryLightButton
+            href="/"
+            icon={<TbRollercoaster />}
+            desc={"Goals"}
+          />
         </div>
-        <h2 className="text-zinc-600 font-medium text-xs mt-8">
+        <h6 className="text-zinc-600 font-medium text-xs mt-8">
           By registering, you acknowledge your acceptance of the{" "}
           <XSLinkLightButton href="/" desc={"Terms of Service"} /> and{" "}
           <XSLinkLightButton href="/" desc={"Privacy Policy"} />, which
           encompasses our <XSLinkLightButton href="/" desc={"Cookie Use"} />.
-        </h2>
+        </h6>
       </div>
-      <div className="flex flex-col justify-center w-full lg:w-[70%] p-8 lg:p-16">
-        Hi
-      </div>
+      <LoginMethod />
     </main>
   );
 };
