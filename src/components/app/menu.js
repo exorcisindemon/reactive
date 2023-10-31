@@ -149,7 +149,7 @@ const Menu = () => {
       {activeComponent === "Thread" && <Thread />}
       {activeComponent === "Setting" && <Setting />}
       {activeComponent === "HelpCenter" && <HelpCenter />}
-      <div className="bg-white flex flex-col justify-start w-full lg:w-[20%] p-8 lg:p-16">
+      <div className="bg-white hidden lg:flex flex-col justify-start w-full lg:w-[20%] p-8 lg:p-16">
         <LBubble />
       </div>
     </main>
