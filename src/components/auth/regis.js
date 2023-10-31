@@ -22,14 +22,19 @@ const Regis = () => {
         </h3>
         <form className="flex flex-col lg:flex-row flex-wrap w-full items-center justify-start lg:justify-center gap-4 mt-8">
           <input
-            className="w-full lg:w-80 ring-1 ring-zinc-200 px-4 py-2 text-black font-medium text-sm rounded-full transition-all hover:bg-zinc-200"
+            className="w-full lg:w-80 ring-1 ring-zinc-200 px-4 py-2 text-black font-medium text-sm rounded-full transition-all hover:ring-blue-600"
             type="text"
-            placeholder="Email / Username"
+            placeholder="Email"
           />
           <input
-            className="w-full lg:w-80 ring-1 ring-zinc-200 px-4 py-2 text-black font-medium text-sm rounded-full transition-all hover:bg-zinc-200"
+            className="w-full lg:w-80 ring-1 ring-zinc-200 px-4 py-2 text-black font-medium text-sm rounded-full transition-all hover:ring-blue-600"
             type="password"
             placeholder="Password"
+          />
+          <input
+            className="w-full lg:w-80 ring-1 ring-zinc-200 px-4 py-2 text-black font-medium text-sm rounded-full transition-all hover:ring-blue-600"
+            type="password"
+            placeholder="Confirm Password"
           />
           <PrimaryLightButton href="/" icon={<TbArrowRight />} desc={"Next"} />
         </form>
