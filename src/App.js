@@ -16,7 +16,7 @@ function App() {
         <Route path="/auth/regis" element={<Regis />} />
         <Route path="/auth/recover" element={<RecoverAccount />} />
         <Route path="*" element={<NotAvailable />} />
-        <Route path="/art" element={<Layout />} />
+        <Route path="/app" element={<Layout />} />
       </Routes>
     </Router>
   );

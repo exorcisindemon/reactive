@@ -4,92 +4,122 @@ import NotSelectedMenu from "./layout/button/notSelectedMenu";
 import {
   TbUserCircle,
   TbUserHexagon,
+  TbMessages,
   TbLayoutGrid,
   TbSearch,
   TbVideo,
   TbTextCaption,
   TbSettings,
   TbHelpCircle,
-  TbLogout
+  TbLogout,
 } from "react-icons/tb";
 
-import KeyFeatures from "../index/keyFeatures";
-import Accessibility from "../index/accessibility";
-import Updates from "../index/updates";
-import Goals from "../index/goals";
-import LearnMore from "../index/learnMore";
+import Creator from "./layout/creator";
+import Professional from "./layout/professional";
+import Bubble from "./layout/bubble";
+import Finder from "./layout/finder";
 import Art from "./layout/art";
+import Clips from "./layout/clips";
+import Thread from "./layout/thread";
+import Setting from "./layout/setting";
+import HelpCenter from "./layout/helpCenter";
+import LBubble from "./layout/content/lBubble";
 
 const Menu = () => {
   const [activeComponent, setActiveComponent] = useState("Art");
 
-  const handleLearnMore = (e) => {
+  const handleMenuAccountModeCreator = (e) => {
     e.preventDefault();
-    setActiveComponent("LearnMore");
+    setActiveComponent("Creator");
   };
 
-  const handleFeature = (e) => {
+  const handleMenuAccountModeProfessional = (e) => {
     e.preventDefault();
-    setActiveComponent("KeyFeatures");
+    setActiveComponent("Professional");
   };
 
-  const handleAccessibility = (e) => {
+  const handleMenuAccountBubble = (e) => {
     e.preventDefault();
-    setActiveComponent("Accessibility");
+    setActiveComponent("Bubble");
   };
 
-  const handleUpdates = (e) => {
+  const handleMenuTaskFinder = (e) => {
     e.preventDefault();
-    setActiveComponent("Updates");
+    setActiveComponent("Finder");
   };
 
-  const handleGoals = (e) => {
+  const handleMenuContentArt = (e) => {
     e.preventDefault();
-    setActiveComponent("Goals");
+    setActiveComponent("Art");
+  };
+
+  const handleMenuContentClips = (e) => {
+    e.preventDefault();
+    setActiveComponent("Clips");
+  };
+
+  const handleMenuContentThread = (e) => {
+    e.preventDefault();
+    setActiveComponent("Thread");
+  };
+
+  const handleMenuAppSetting = (e) => {
+    e.preventDefault();
+    setActiveComponent("Setting");
+  };
+
+  const handleMenuAppHelpCenter = (e) => {
+    e.preventDefault();
+    setActiveComponent("HelpCenter");
   };
 
   return (
     <main className="flex flex-col lg:flex-row w-full h-full lg:h-screen">
       <div className="bg-white flex flex-col justify-center w-full lg:w-[20%] p-8 lg:p-16">
-        <h1 className="text-black font-bold text-2xl lg:text-4xl mt-0">
-          Reactive
-        </h1>
-        <div className="flex flex-col flex-wrap gap-4 mt-8">
+        <div className="flex flex-col flex-wrap gap-4 mt-0 lg:mt-8">
           <NotSelectedMenu
             href="/"
-            task={handleFeature}
+            task={handleMenuAccountModeCreator}
             icon={<TbUserCircle />}
             desc={"Creator"}
           />
           <NotSelectedMenu
             href="/"
-            task={handleFeature}
+            task={handleMenuAccountModeProfessional}
             icon={<TbUserHexagon />}
             desc={"Professional"}
+          />
+          <NotSelectedMenu
+            href="/"
+            task={handleMenuAccountBubble}
+            icon={<TbMessages />}
+            desc={"Bubble"}
+          />
+        </div>
+        <div className="flex flex-col flex-wrap gap-4 mt-8">
+          <NotSelectedMenu
+            href="/"
+            task={handleMenuTaskFinder}
+            icon={<TbSearch />}
+            desc={"Finder"}
           />
         </div>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
           <SelectedMenu
             href="/"
-            task={handleLearnMore}
+            task={handleMenuContentArt}
             icon={<TbLayoutGrid />}
             desc={"Art"}
           />
           <NotSelectedMenu
             href="/"
-            task={handleFeature}
-            icon={<TbSearch />}
-            desc={"Finder"}
-          />
-          <NotSelectedMenu
-            href="/"
-            task={handleAccessibility}
+            task={handleMenuContentClips}
             icon={<TbVideo />}
             desc={"Clips"}
           />
           <NotSelectedMenu
             href="/"
-            task={handleUpdates}
+            task={handleMenuContentThread}
             icon={<TbTextCaption />}
             desc={"Thread"}
           />
@@ -97,30 +127,31 @@ const Menu = () => {
         <div className="flex flex-col flex-wrap gap-4 mt-8">
           <NotSelectedMenu
             href="/"
-            task={handleFeature}
+            task={handleMenuAppSetting}
             icon={<TbSettings />}
             desc={"Setting"}
           />
           <NotSelectedMenu
             href="/"
-            task={handleFeature}
+            task={handleMenuAppHelpCenter}
             icon={<TbHelpCircle />}
             desc={"Help Center"}
           />
-          <NotSelectedMenu
-            href="/"
-            task={handleFeature}
-            icon={<TbLogout />}
-            desc={"Log Out"}
-          />
+          <NotSelectedMenu href="/" icon={<TbLogout />} desc={"Log Out"} />
         </div>
       </div>
+      {activeComponent === "Creator" && <Creator />}
+      {activeComponent === "Professional" && <Professional />}
+      {activeComponent === "Bubble" && <Bubble />}
+      {activeComponent === "Finder" && <Finder />}
       {activeComponent === "Art" && <Art />}
-      {activeComponent === "LearnMore" && <LearnMore />}
-      {activeComponent === "KeyFeatures" && <KeyFeatures />}
-      {activeComponent === "Accessibility" && <Accessibility />}
-      {activeComponent === "Updates" && <Updates />}
-      {activeComponent === "Goals" && <Goals />}
+      {activeComponent === "Clips" && <Clips />}
+      {activeComponent === "Thread" && <Thread />}
+      {activeComponent === "Setting" && <Setting />}
+      {activeComponent === "HelpCenter" && <HelpCenter />}
+      <div className="bg-white flex flex-col justify-start w-full lg:w-[20%] p-8 lg:p-16">
+        <LBubble />
+      </div>
     </main>
   );
 };
