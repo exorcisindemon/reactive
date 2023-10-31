@@ -11,7 +11,7 @@ import {
   TbRollercoaster,
 } from "react-icons/tb";
 
-import LoginMethod from "../components/auth/loginMethod";
+import LogInMethod from "../components/auth/logInMethod";
 import KeyFeatures from "../components/index/keyFeatures";
 import Accessibility from "../components/index/accessibility";
 import Updates from "../components/index/updates";
@@ -19,7 +19,7 @@ import Goals from "../components/index/goals";
 import LearnMore from "../components/index/learnMore";
 
 const Index = () => {
-  const [activeComponent, setActiveComponent] = useState("LoginMethod");
+  const [activeComponent, setActiveComponent] = useState("LogInMethod");
 
   const handleLearnMore = (e) => {
     e.preventDefault();
@@ -100,7 +100,7 @@ const Index = () => {
           encompasses our <XSLinkLightButton href="/" desc={"Cookie Use"} />.
         </h6>
       </div>
-      {activeComponent === "LoginMethod" && <LoginMethod />}
+      {activeComponent === "LogInMethod" && <LogInMethod />}
       {activeComponent === "LearnMore" && <LearnMore />}
       {activeComponent === "KeyFeatures" && <KeyFeatures />}
       {activeComponent === "Accessibility" && <Accessibility />}

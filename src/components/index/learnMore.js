@@ -1,17 +1,11 @@
+import VersionControl from "../../utility/versionControl";
 import SecondaryLightButton from "../button/secondaryLightButton";
 import { TbArrowLeft, TbSortDescending2, TbHelpCircle, TbStar } from "react-icons/tb";
 
 const LearnMore = () => {
   return (
     <div className="flex flex-col justify-start w-full lg:w-[70%] p-8 lg:p-16">
-      <div className="flex flex-row justify-between">
-        <h6 className="text-zinc-400 font-medium text-xs mt-0">
-          Reactive 2023
-        </h6>
-        <h6 className="text-zinc-400 font-medium text-xs mt-0">
-          1.00.200(A) - 31 September, 2023
-        </h6>
-      </div>
+      <VersionControl />
       <div className="mt-8 overflow-y-auto">
         <a
           href="/"

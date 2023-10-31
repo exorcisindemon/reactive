@@ -1,3 +1,4 @@
+import VersionControl from "../../utility/versionControl";
 import PrimaryLightButton from "../button/primaryLightButton";
 import SecondaryLightButton from "../button/secondaryLightButton";
 import XSLinkLightButton from "../button/xsLinkLightButton";
@@ -9,20 +10,13 @@ import {
   TbKey,
 } from "react-icons/tb";
 
-const LoginMethod = () => {
+const LogInMethod = () => {
   return (
     <div className="flex flex-col justify-between w-full lg:w-[70%] p-8 lg:p-16">
-      <div className="flex flex-row justify-between">
-        <h6 className="text-zinc-400 font-medium text-xs mt-0">
-          Reactive 2023
-        </h6>
-        <h6 className="text-zinc-400 font-medium text-xs mt-0">
-          1.00.200(A) - 31 September, 2023
-        </h6>
-      </div>
+      <VersionControl />
       <div>
         <h2 className="text-black font-bold text-2xl lg:text-4xl mt-0">
-          Log in
+          Log In
         </h2>
         <h3 className="w-full lg:w-[40%] text-zinc-600 font-medium text-sm lg:text-lg mt-8">
           Join the Community - Unlock a World of Possibilities with a Single
@@ -30,19 +24,19 @@ const LoginMethod = () => {
         </h3>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
           <PrimaryLightButton
-            href="/"
+            href="/auth/regis"
             icon={<TbMail />}
-            desc={"Register with Email"}
+            desc={"Register using Email"}
           />
           <SecondaryLightButton
             href="/"
             icon={<TbBrandGoogle />}
-            desc={"Register with Google"}
+            desc={"Register using Google"}
           />
           <SecondaryLightButton
             href="/"
             icon={<TbBrandApple />}
-            desc={"Register with Apple"}
+            desc={"Register using Apple"}
           />
         </div>
         <h6 className="w-full lg:w-[40%] text-zinc-600 font-medium text-xs mt-8">
@@ -58,7 +52,7 @@ const LoginMethod = () => {
           existing account.
         </h6>
         <div className="flex flex-row flex-wrap gap-4 mt-8">
-          <PrimaryLightButton href="/" icon={<TbLogin />} desc={"Log in"} />
+          <PrimaryLightButton href="/auth/login" icon={<TbLogin />} desc={"Log In"} />
           <SecondaryLightButton
             href="/"
             icon={<TbKey />}
@@ -70,4 +64,4 @@ const LoginMethod = () => {
   );
 };
 
-export default LoginMethod;
+export default LogInMethod;
