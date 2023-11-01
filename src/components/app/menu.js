@@ -81,54 +81,117 @@ const Menu = () => {
           />
         </div>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuAccountBubble}
-            icon={<TbMessages />}
-            desc={"Bubble"}
-          />
+          {activeComponent === "Bubble" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuAccountBubble}
+              icon={<TbMessages />}
+              desc={"Bubble"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuAccountBubble}
+              icon={<TbMessages />}
+              desc={"Bubble"}
+            />
+          )}
         </div>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuTaskFinder}
-            icon={<TbSearch />}
-            desc={"Finder"}
-          />
+          {activeComponent === "Finder" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuTaskFinder}
+              icon={<TbSearch />}
+              desc={"Finder"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuTaskFinder}
+              icon={<TbSearch />}
+              desc={"Finder"}
+            />
+          )}
         </div>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
-          <SelectedMenu
-            href="/"
-            task={handleMenuContentArt}
-            icon={<TbLayoutGrid />}
-            desc={"Art"}
-          />
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuContentClips}
-            icon={<TbVideo />}
-            desc={"Clips"}
-          />
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuContentThread}
-            icon={<TbTextCaption />}
-            desc={"Thread"}
-          />
+          {activeComponent === "Art" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuContentArt}
+              icon={<TbLayoutGrid />}
+              desc={"Art"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuContentArt}
+              icon={<TbLayoutGrid />}
+              desc={"Art"}
+            />
+          )}
+          {activeComponent === "Clips" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuContentClips}
+              icon={<TbVideo />}
+              desc={"Clips"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuContentClips}
+              icon={<TbVideo />}
+              desc={"Clips"}
+            />
+          )}
+          {activeComponent === "Thread" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuContentThread}
+              icon={<TbTextCaption />}
+              desc={"Thread"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuContentThread}
+              icon={<TbTextCaption />}
+              desc={"Thread"}
+            />
+          )}
         </div>
         <div className="flex flex-col flex-wrap gap-4 mt-8">
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuAppSetting}
-            icon={<TbSettings />}
-            desc={"Setting"}
-          />
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuAppHelpCenter}
-            icon={<TbHelpCircle />}
-            desc={"Help Center"}
-          />
+          {activeComponent === "Setting" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuAppSetting}
+              icon={<TbSettings />}
+              desc={"Setting"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuAppSetting}
+              icon={<TbSettings />}
+              desc={"Setting"}
+            />
+          )}
+          {activeComponent === "HelpCenter" ? (
+            <SelectedMenu
+              href="/"
+              task={handleMenuAppHelpCenter}
+              icon={<TbHelpCircle />}
+              desc={"Help Center"}
+            />
+          ) : (
+            <NotSelectedMenu
+              href="/"
+              task={handleMenuAppHelpCenter}
+              icon={<TbHelpCircle />}
+              desc={"Help Center"}
+            />
+          )}
           <NotSelectedMenu href="/" icon={<TbLogout />} desc={"Log Out"} />
         </div>
       </div>

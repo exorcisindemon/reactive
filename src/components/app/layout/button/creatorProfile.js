@@ -12,7 +12,7 @@ const CreatorProfile = ({ href, task, icon, name, username, mode }) => {
         <div className="flex flex-col gap-0 items-start">
           <div className="flex flex-row gap-2 items-center">
             <p className="font-semibold text-base">{name}</p>
-            <p className="font-medium text-sm">(@ {username})</p>
+            <p className="font-medium text-sm">(@{username})</p>
           </div>
           <p className="font-medium text-sm">{mode} Mode</p>
         </div>
