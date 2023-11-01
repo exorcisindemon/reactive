@@ -31,7 +31,7 @@ const LogIn = () => {
             type="password"
             placeholder="Password"
           />
-          <PrimaryLightButton href="/" icon={<TbLogin />} desc={"Log In"} />
+          <PrimaryLightButton href="/app" icon={<TbLogin />} desc={"Log In"} />
         </form>
         <h6 className="w-full lg:w-[40%] text-zinc-600 text-start lg:text-center font-medium text-xs mt-8">
           <XSLinkLightButton href="/" desc={"Learn more"} /> about your all your

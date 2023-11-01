@@ -3,7 +3,6 @@ import SelectedMenu from "./layout/button/selectedMenu";
 import NotSelectedMenu from "./layout/button/notSelectedMenu";
 import {
   TbUserCircle,
-  TbUserHexagon,
   TbMessages,
   TbLayoutGrid,
   TbSearch,
@@ -14,8 +13,8 @@ import {
   TbLogout,
 } from "react-icons/tb";
 
+import CreatorProfile from "./layout/button/creatorProfile";
 import Creator from "./layout/creator";
-import Professional from "./layout/professional";
 import Bubble from "./layout/bubble";
 import Finder from "./layout/finder";
 import Art from "./layout/art";
@@ -31,11 +30,6 @@ const Menu = () => {
   const handleMenuAccountModeCreator = (e) => {
     e.preventDefault();
     setActiveComponent("Creator");
-  };
-
-  const handleMenuAccountModeProfessional = (e) => {
-    e.preventDefault();
-    setActiveComponent("Professional");
   };
 
   const handleMenuAccountBubble = (e) => {
@@ -77,18 +71,16 @@ const Menu = () => {
     <main className="flex flex-col lg:flex-row w-full h-full lg:h-screen">
       <div className="bg-white flex flex-col justify-center w-full lg:w-[20%] p-8 lg:p-16">
         <div className="flex flex-col flex-wrap gap-4 mt-0 lg:mt-8">
-          <NotSelectedMenu
+          <CreatorProfile
             href="/"
             task={handleMenuAccountModeCreator}
             icon={<TbUserCircle />}
-            desc={"Creator"}
+            name={"Ras"}
+            username={"sievl"}
+            mode={"Professional"}
           />
-          <NotSelectedMenu
-            href="/"
-            task={handleMenuAccountModeProfessional}
-            icon={<TbUserHexagon />}
-            desc={"Professional"}
-          />
+        </div>
+        <div className="flex flex-col flex-wrap gap-4 mt-8">
           <NotSelectedMenu
             href="/"
             task={handleMenuAccountBubble}
@@ -141,7 +133,6 @@ const Menu = () => {
         </div>
       </div>
       {activeComponent === "Creator" && <Creator />}
-      {activeComponent === "Professional" && <Professional />}
       {activeComponent === "Bubble" && <Bubble />}
       {activeComponent === "Finder" && <Finder />}
       {activeComponent === "Art" && <Art />}
