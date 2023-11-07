@@ -7,7 +7,7 @@ const CreatorProfile = ({ href, task, icon, name, username, mode }) => {
       onClick={task}
       className="flex flex-row gap-2 items-center px-4 py-8 w-full text-blue-600 ring-1 ring-zinc-200 rounded-2xl transition-all hover:bg-zinc-200"
     >
-      <div className="flex flex-row gap-2 items-center text-4xl">
+      <div className="flex flex-row gap-4 items-center text-4xl">
         {icon}
         <div className="flex flex-col gap-0 items-start">
           <div className="flex flex-row gap-2 items-center">
