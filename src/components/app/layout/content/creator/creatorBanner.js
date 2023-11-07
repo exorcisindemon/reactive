@@ -2,7 +2,7 @@ import { TbSettings, TbUserCircle } from "react-icons/tb";
 
 const CreatorBanner = () => {
   return (
-    <div className="bg-white flex flex-col w-full h-fit rounded-2xl ring-1 ring-zinc-200 px-4 lg:px-16 py-4 lg:py-16">
+    <div className="bg-white flex flex-col w-full h-fit rounded-2xl ring-1 ring-zinc-200 px-4 lg:px-16 py-4 lg:py-16 transition-all hover:shadow-2xl hover:shadow-zinc-200">
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
         <div className="text-4xl flex flex-row items-center justify-start gap-4">
           <TbUserCircle />
