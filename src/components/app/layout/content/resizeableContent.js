@@ -2,7 +2,7 @@ import { TbUserCircle } from "react-icons/tb";
 
 const ResizeableContent = ({ username, location, caption, date, device }) => {
   return (
-    <main className="bg-white flex flex-col w-full lg:w-[480px] h-full p-8 rounded-2xl transition-all hover:shadow-2xl hover:shadow-zinc-200">
+    <main className="bg-white flex flex-col w-full lg:w-[480px] h-[640px] p-8 rounded-2xl transition-all hover:shadow-2xl hover:shadow-zinc-200">
       <div className="flex flex-col lg:flex-row gap-4 items-center">
         <div className="p-4 ring-1 ring-zinc-200 rounded-full">
           <TbUserCircle />

@@ -79,8 +79,6 @@ const Menu = () => {
             username={"sievl"}
             mode={"Professional"}
           />
-        </div>
-        <div className="flex flex-col flex-wrap gap-4 mt-8">
           {activeComponent === "Bubble" ? (
             <SelectedMenu
               href="/"
